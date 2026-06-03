@@ -10,7 +10,42 @@ const IMAGES = {
   film5: "https://cdn.poehali.dev/projects/d10351c8-7d02-4640-88a6-6eb0167bcf8d/files/08b59ac0-a7f6-4cdf-83e5-9203baa008ae.jpg",
 };
 
+const PRADA_IMAGE = "https://cdn.poehali.dev/projects/d10351c8-7d02-4640-88a6-6eb0167bcf8d/bucket/9962dde7-4477-4985-bd17-718b96cb91f5.jpg";
+
 const REVIEWS = [
+  {
+    id: 7,
+    title: "«Дьявол носит Prada 2»",
+    director: "Дэвид Фрэнкел",
+    year: 2026,
+    genre: "Комедия-драма",
+    rating: 7.4,
+    image: PRADA_IMAGE,
+    excerpt: "Мода после апокалипсиса глянца. Редко какой массовый фильм настолько честно говорит о конце эпохи, которая когда-то казалась вечной.",
+    tag: "Громкая премьера",
+    author: "Анна Соколова",
+    date: "4 июня 2026",
+    readTime: "10 мин",
+    country: "США",
+    duration: "118 мин",
+    scores: { сценарий: 7, режиссура: 7, актёрская_игра: 9, визуальный_ряд: 9, музыка: 7 },
+    fullText: [
+      { type: "lead", text: "Когда в 2006 году «Дьявол носит Prada» вышел на экраны, фильм оказался не просто комедией о мире высокой моды. Это была история о цене успеха, токсичности карьерных амбиций и соблазне власти, упакованная в идеальный глянец. Спустя двадцать лет продолжение оказывается в куда более сложной позиции: оно должно вернуть зрителя в знакомый мир и одновременно признать очевидное — эпоха, сделавшая Миранду Пристли культурным феноменом, закончилась." },
+      { type: "h2", text: "Когда власть стареет" },
+      { type: "p", text: "Сиквел строится именно на этом конфликте. Глянец умирает, печатные журналы теряют влияние, алгоритмы заменяют редакционную интуицию, а бывшие ассистенты давно перестали быть младшими сотрудниками. Миранда Пристли больше не выглядит всесильной богиней индустрии — и это главное драматургическое решение фильма. Вместо привычной истории о восхождении новичка перед нами рассказ о старении власти и попытке сохранить статус в мире, который больше не нуждается в старых правилах." },
+      { type: "p", text: "Главное достоинство картины — Мерил Стрип. Она не играет «ту самую Миранду», а показывает женщину, которая впервые сталкивается не с конкурентами, а с историей. Её знаменитая холодность остаётся на месте, но в ней появляется нечто новое: тревога человека, привыкшего диктовать время и внезапно обнаружившего, что время перестало слушаться." },
+      { type: "h2", text: "Между поколениями" },
+      { type: "p", text: "Энн Хэтэуэй получает гораздо более сложную задачу. Её Энди Сакс теперь существует между поколениями: слишком опытная, чтобы быть наивной героиней первой части, но недостаточно циничная, чтобы полностью принять правила нового медиамира. Именно через неё фильм задаёт главный вопрос: можно ли сохранить профессиональную идентичность, когда профессия меняется быстрее человека?" },
+      { type: "quote", text: "Сегодня инфлюенсер способен разрушить репутацию быстрее, чем главный редактор журнала — создать её." },
+      { type: "h2", text: "Ностальгия как ловушка" },
+      { type: "p", text: "Особенно интересно наблюдать за тем, как продолжение меняет акценты оригинала. В 2006-м фильм романтизировал индустрию, одновременно критикуя её. В 2026-м романтизации почти нет. Подиумы остались, дизайнерские вещи остались, бесконечные брендовые названия тоже никуда не исчезли, но исчезла вера в исключительность этого мира." },
+      { type: "p", text: "Визуально фильм работает почти безошибочно. Костюмы снова становятся отдельным языком повествования: персонажи разговаривают тканями, силуэтами и цветами не меньше, чем словами. Однако именно здесь проявляется и главная проблема картины — чрезмерная осторожность. Сиквел слишком хорошо понимает, что зрители пришли за ностальгией, поэтому иногда буквально боится отпустить прошлое." },
+      { type: "p", text: "Но, возможно, в этом и заключается парадокс фильма. Он рассказывает о невозможности жить прошлым, одновременно постоянно к нему возвращаясь. «Дьявол носит Prada 2» не совершает революцию и не переизобретает оригинал. Вместо этого он делает более интересную вещь: показывает, что даже культурные монументы стареют." },
+      { type: "h2", text: "Итог" },
+      { type: "p", text: "Если первая часть была фильмом о том, как система поглощает человека, то продолжение — о том, что происходит, когда система начинает разрушаться." },
+    ],
+    verdict: "Можно посмотреть. Не потому, что продолжение превосходит оригинал — этого не происходит. А потому, что редко какой массовый фильм настолько честно говорит о конце эпохи, которая когда-то казалась вечной.",
+  },
   {
     id: 1,
     title: "Опасный метод",
@@ -511,6 +546,56 @@ export default function Index() {
             <div className="mb-10">
               <span className="font-body text-xs tracking-[0.25em] text-gold/70 uppercase">Архив</span>
               <h2 className="font-display text-5xl font-light text-white mt-2">Рецензии</h2>
+            </div>
+
+            {/* Громкая премьера — featured banner */}
+            <div
+              className="relative overflow-hidden mb-10 cursor-pointer group"
+              onClick={() => openReview(REVIEWS[0])}
+            >
+              <div className="relative h-[340px] md:h-[420px]">
+                <img
+                  src={PRADA_IMAGE}
+                  alt="Дьявол носит Prada 2"
+                  className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 max-w-xl">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="font-body text-xs font-bold px-2.5 py-1 bg-red-700 text-white tracking-wider uppercase">
+                      Громкая премьера
+                    </span>
+                    <span className="font-body text-xs text-white/50">4 июня 2026</span>
+                  </div>
+                  <h2 className="font-display text-3xl md:text-5xl font-semibold text-white leading-tight mb-2">
+                    «Дьявол носит Prada 2»
+                  </h2>
+                  <p className="font-display text-lg md:text-xl italic text-white/70 mb-4">
+                    Мода после апокалипсиса глянца
+                  </p>
+                  <p className="font-body text-sm text-white/60 leading-relaxed mb-5 hidden md:block">
+                    Продолжение культовой истории о власти, амбициях и цене успеха — в мире, где глянец больше не диктует правила.
+                  </p>
+                  <div className="flex items-center gap-5">
+                    <div className="flex items-center gap-2">
+                      {[1,2,3,4,5].map(i => (
+                        <Icon key={i} name="Star" size={13} className={i <= 4 ? "text-gold fill-current" : "text-white/20"} />
+                      ))}
+                      <span className="font-body font-semibold text-gold ml-1">7.4</span>
+                    </div>
+                    <div className="h-4 w-px bg-white/20" />
+                    <span className="font-body text-xs text-white/40">Комедия-драма · 2026</span>
+                    <span className="ml-auto flex items-center gap-1.5 font-body text-sm text-gold group-hover:gap-3 transition-all">
+                      Читать <Icon name="ArrowRight" size={14} />
+                    </span>
+                  </div>
+                  <div className="mt-4 flex items-center gap-2">
+                    <span className="font-body text-xs px-2 py-0.5 border border-red-700/60 text-red-400">ВЕРДИКТ:</span>
+                    <span className="font-body text-xs text-white/60 uppercase tracking-wider">Можно посмотреть</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="bg-[hsl(0,0%,8%)] border border-white/5 p-5 mb-10 space-y-4">
