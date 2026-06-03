@@ -344,9 +344,16 @@ export default function Index() {
           <div className="flex items-center justify-between h-16">
             <button
               onClick={() => setActiveSection("home")}
-              className="font-display text-2xl font-light tracking-widest text-gold"
+              className="flex items-center gap-3"
             >
-              КИН<span className="text-white">О</span>ВЗГЛЯД
+              <img
+                src="https://cdn.poehali.dev/projects/d10351c8-7d02-4640-88a6-6eb0167bcf8d/bucket/f4607249-eeb9-4ad9-aff4-4dabcce66d46.png"
+                alt="Киновзгляд"
+                className="h-9 w-9 rounded-sm object-cover"
+              />
+              <span className="font-display text-2xl font-light tracking-widest text-gold hidden sm:block">
+                КИН<span className="text-white">О</span>ВЗГЛЯД
+              </span>
             </button>
 
             <nav className="hidden lg:flex items-center gap-8">
@@ -368,8 +375,13 @@ export default function Index() {
                 href="https://vk.com"
                 target="_blank"
                 rel="noreferrer"
-                className="hidden md:flex items-center gap-2 text-xs font-body text-white/50 hover:text-gold transition-colors tracking-wide"
+                className="hidden md:flex items-center gap-2 text-xs font-body text-white/50 hover:text-white transition-colors tracking-wide group"
               >
+                <img
+                  src="https://cdn.poehali.dev/projects/d10351c8-7d02-4640-88a6-6eb0167bcf8d/bucket/f4607249-eeb9-4ad9-aff4-4dabcce66d46.png"
+                  alt="ВКонтакте"
+                  className="w-6 h-6 rounded-sm opacity-60 group-hover:opacity-100 transition-opacity"
+                />
                 ВКонтакте
               </a>
               <button
@@ -414,26 +426,26 @@ export default function Index() {
                 className="absolute inset-0 w-full h-full object-cover opacity-50"
               />
               <div className="hero-gradient absolute inset-0" />
-              <div className="absolute inset-0 flex flex-col justify-end pb-20 px-8 md:px-16 max-w-7xl mx-auto left-0 right-0">
-                <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
-                  <span className="font-body text-xs tracking-[0.3em] text-gold/80 uppercase">Авторское кино-СМИ</span>
-                </div>
-                <h1
-                  className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-white mt-4 leading-none opacity-0 animate-fade-in-up"
-                  style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+                <div
+                  className="opacity-0 animate-fade-in-up"
+                  style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}
                 >
-                  Смотреть<br />
-                  <span className="text-gold italic">осмысленно</span>
-                </h1>
+                  <img
+                    src="https://cdn.poehali.dev/projects/d10351c8-7d02-4640-88a6-6eb0167bcf8d/bucket/f4607249-eeb9-4ad9-aff4-4dabcce66d46.png"
+                    alt="Киновзгляд"
+                    className="w-36 h-36 md:w-48 md:h-48 mx-auto object-contain drop-shadow-2xl"
+                  />
+                </div>
                 <p
-                  className="font-body text-base md:text-lg text-white/60 mt-6 max-w-xl leading-relaxed opacity-0 animate-fade-in-up"
-                  style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}
+                  className="font-body text-sm md:text-base text-white/55 mt-6 max-w-md leading-relaxed opacity-0 animate-fade-in-up"
+                  style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
                 >
                   Авторские рецензии, аналитика и рекомендации для тех, кто ищет в кино больше, чем развлечение
                 </p>
                 <div
                   className="flex gap-4 mt-8 opacity-0 animate-fade-in-up"
-                  style={{ animationDelay: "0.65s", animationFillMode: "forwards" }}
+                  style={{ animationDelay: "0.55s", animationFillMode: "forwards" }}
                 >
                   <button
                     onClick={() => setActiveSection("reviews")}
@@ -441,12 +453,19 @@ export default function Index() {
                   >
                     Читать рецензии
                   </button>
-                  <button
-                    onClick={() => setActiveSection("afisha")}
-                    className="px-6 py-3 border border-white/30 text-white font-body text-sm tracking-wide hover:border-gold hover:text-gold transition-colors"
+                  <a
+                    href="https://vk.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-6 py-3 border border-white/30 text-white font-body text-sm tracking-wide hover:border-gold hover:text-gold transition-colors flex items-center gap-2"
                   >
-                    Афиша недели
-                  </button>
+                    <img
+                      src="https://cdn.poehali.dev/projects/d10351c8-7d02-4640-88a6-6eb0167bcf8d/bucket/f4607249-eeb9-4ad9-aff4-4dabcce66d46.png"
+                      alt=""
+                      className="w-4 h-4 rounded-sm opacity-70"
+                    />
+                    Паблик ВКонтакте
+                  </a>
                 </div>
               </div>
             </section>
@@ -969,8 +988,15 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             <div className="col-span-2 md:col-span-1">
-              <div className="font-display text-2xl font-light tracking-widest text-gold mb-4">
-                КИН<span className="text-white">О</span>ВЗГЛЯД
+              <div className="flex items-center gap-3 mb-4">
+                <img
+                  src="https://cdn.poehali.dev/projects/d10351c8-7d02-4640-88a6-6eb0167bcf8d/bucket/f4607249-eeb9-4ad9-aff4-4dabcce66d46.png"
+                  alt="Киновзгляд"
+                  className="w-10 h-10 rounded-sm object-cover"
+                />
+                <span className="font-display text-xl font-light tracking-widest text-gold">
+                  КИН<span className="text-white">О</span>ВЗГЛЯД
+                </span>
               </div>
               <p className="font-body text-xs text-white/40 leading-relaxed">
                 Авторское интернет-СМИ о кино. Профессиональный взгляд на современный кинопоток.
