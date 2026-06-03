@@ -226,10 +226,61 @@ const REVIEWS = [
 ];
 
 const AFISHA = [
-  { title: "Дюна: Часть вторая", genre: "Фантастика", date: "В прокате", rating: 8.8, image: IMAGES.film2 },
-  { title: "Конклав", genre: "Триллер", date: "В прокате", rating: 8.3, image: IMAGES.film4 },
-  { title: "Анора", genre: "Драма", date: "7 июня", rating: 9.1, image: IMAGES.film1 },
-  { title: "Лимонов: Баллада", genre: "Биография", date: "14 июня", rating: 7.9, image: IMAGES.film3 },
+  {
+    title: "Дьявол носит Prada 2",
+    genre: "Драма, комедия",
+    date: "В прокате",
+    rating: 9.0,
+    image: "https://cdn.poehali.dev/projects/d10351c8-7d02-4640-88a6-6eb0167bcf8d/files/01f22caa-c6a5-4b7e-b491-707aed6701fb.jpg",
+    director: "Дэвид Фрэнкел",
+    cast: "Мэрил Стрип, Энн Хэтэуэй, Эмили Блант, Стэнли Туччи",
+    ratingExpect: "9/10",
+    desc: "Спустя двадцать лет Миранда Пристли возвращается в индустрию, которая больше не играет по старым правилам. Разговор о кризисе глянца, власти и поколенческих конфликтах.",
+  },
+  {
+    title: "Мортал Комбат 2",
+    genre: "Боевик, фэнтези",
+    date: "В прокате",
+    rating: 8.5,
+    image: "https://cdn.poehali.dev/projects/d10351c8-7d02-4640-88a6-6eb0167bcf8d/files/7cc702e7-806c-4f47-800f-ef8ccc9036cf.jpg",
+    director: "Саймон Маккуойд",
+    cast: "Карл Урбан, Льюис Тан, Джессика Макнэми, Хироюки Санада",
+    ratingExpect: "8,5/10",
+    desc: "Продолжение экранизации культовой игровой франшизы: больше бойцов, выше ставки и ещё больше зрелищных поединков.",
+  },
+  {
+    title: "Хокум",
+    genre: "Ужасы, триллер",
+    date: "В прокате",
+    rating: 7.5,
+    image: "https://cdn.poehali.dev/projects/d10351c8-7d02-4640-88a6-6eb0167bcf8d/files/4966cdea-83e8-47d1-ba0b-9cdc50c0aaf9.jpg",
+    director: "Дэмиэн Маккарти",
+    cast: "Адам Скотт, Питер Кунан",
+    ratingExpect: "7,5/10",
+    desc: "Ирландский хоррор про писателя в изолированном отеле после семейной трагедии. Потенциальный «тихий хит» для поклонников атмосферных ужасов.",
+  },
+  {
+    title: "Мандалорец и Грогу",
+    genre: "Фантастика, приключения",
+    date: "В прокате",
+    rating: 9.5,
+    image: "https://cdn.poehali.dev/projects/d10351c8-7d02-4640-88a6-6eb0167bcf8d/files/9963995c-65d4-4c9c-b959-3f2fc7781f57.jpg",
+    director: "Джон Фавро",
+    cast: "Педро Паскаль, Сигурни Уивер",
+    ratingExpect: "9,5/10",
+    desc: "Вселенная далёкой-далёкой галактики возвращается на большой экран. Одно из крупнейших событий весеннего проката.",
+  },
+  {
+    title: "Грязные деньги",
+    genre: "Боевик, триллер",
+    date: "В прокате",
+    rating: 8.0,
+    image: "https://cdn.poehali.dev/projects/d10351c8-7d02-4640-88a6-6eb0167bcf8d/files/609346e9-de35-426c-b906-2e3a09000848.jpg",
+    director: "Гай Ричи",
+    cast: "Джейк Джилленхол, Генри Кавилл, Эйса Гонсалес, Розамунд Пайк",
+    ratingExpect: "8/10",
+    desc: "Новый Гай Ричи со звёздным кастом: криминальные схемы, харизматичные преступники и фирменный ритм режиссёра.",
+  },
 ];
 
 const GENRES = ["Все", "Драма", "Триллер", "Мелодрама", "Фэнтези", "Фантастика", "Комедия"];
@@ -372,7 +423,7 @@ export default function Index() {
 
             <div className="flex items-center gap-4">
               <a
-                href="https://vk.com"
+                href="https://vk.com/club238178988"
                 target="_blank"
                 rel="noreferrer"
                 className="hidden md:flex items-center gap-2 text-xs font-body text-white/50 hover:text-white transition-colors tracking-wide group"
@@ -454,7 +505,7 @@ export default function Index() {
                     Читать рецензии
                   </button>
                   <a
-                    href="https://vk.com"
+                    href="https://vk.com/club238178988"
                     target="_blank"
                     rel="noreferrer"
                     className="px-6 py-3 border border-white/30 text-white font-body text-sm tracking-wide hover:border-gold hover:text-gold transition-colors flex items-center gap-2"
@@ -695,30 +746,90 @@ export default function Index() {
         {/* ====== AFISHA ====== */}
         {activeSection === "afisha" && (
           <section className="max-w-7xl mx-auto px-4 md:px-8 py-12">
-            <div className="mb-10">
+            <div className="mb-4">
               <span className="font-body text-xs tracking-[0.25em] text-gold/70 uppercase">Кинопремьеры</span>
               <h2 className="font-display text-5xl font-light text-white mt-2">Афиша</h2>
-              <p className="font-body text-sm text-white/50 mt-3">Еженедельный обзор новинок кинопроката и стримингов</p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-              {[...AFISHA, ...AFISHA].map((film, i) => (
-                <div key={i} className="card-hover group cursor-pointer opacity-0 animate-fade-in-up" style={{ animationDelay: `${i * 0.08}s`, animationFillMode: "forwards" }}>
-                  <div className="relative overflow-hidden" style={{ aspectRatio: "2/3" }}>
-                    <img src={film.image} alt={film.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="poster-overlay absolute inset-0" />
-                    <div className="absolute top-3 left-3 bg-gold px-2 py-0.5">
-                      <span className="text-black text-xs font-body font-semibold">{film.date}</span>
+            <p className="font-display text-xl italic text-white/50 mb-10 border-l-2 border-gold/40 pl-4">
+              Что смотреть в кино — главные премьеры мая
+            </p>
+
+            <div className="space-y-6">
+              {AFISHA.map((film, i) => (
+                <div
+                  key={i}
+                  className="group border border-white/5 hover:border-gold/20 transition-colors overflow-hidden opacity-0 animate-fade-in-up"
+                  style={{ animationDelay: `${i * 0.1}s`, animationFillMode: "forwards" }}
+                >
+                  <div className="flex flex-col md:flex-row">
+                    {/* Poster */}
+                    <div className="relative flex-shrink-0 w-full md:w-44 overflow-hidden" style={{ aspectRatio: "2/3", maxHeight: "260px" }}>
+                      <img
+                        src={film.image}
+                        alt={film.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-600"
+                        style={{ objectPosition: "center top" }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[hsl(0,0%,8%)] hidden md:block" />
+                      <div className="absolute top-3 left-3">
+                        <span className="bg-gold text-black text-xs font-body font-bold px-2 py-0.5">{film.date}</span>
+                      </div>
                     </div>
-                    <div className="absolute bottom-3 left-3 right-3">
-                      <h3 className="font-display text-lg font-semibold text-white leading-tight">{film.title}</h3>
-                      <div className="flex items-center justify-between mt-1">
-                        <span className="text-xs font-body text-white/50">{film.genre}</span>
-                        <span className="text-gold text-sm font-semibold font-body">{film.rating}</span>
+
+                    {/* Info */}
+                    <div className="flex-1 p-5 md:p-7 flex flex-col justify-between bg-[hsl(0,0%,8%)]">
+                      <div>
+                        <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
+                          <div>
+                            <h3 className="font-display text-2xl md:text-3xl font-semibold text-white leading-tight group-hover:text-gold transition-colors">
+                              {film.title}
+                            </h3>
+                            <p className="font-body text-sm text-white/40 mt-1">{film.genre}</p>
+                          </div>
+                          <div className="text-right flex-shrink-0">
+                            <div className="font-body text-xs text-white/30 mb-1">Рейтинг ожиданий</div>
+                            <div className="font-display text-2xl font-semibold text-gold">{film.ratingExpect}</div>
+                          </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+                          <div>
+                            <span className="font-body text-xs text-white/30">Режиссёр</span>
+                            <p className="font-body text-sm text-white/70">{film.director}</p>
+                          </div>
+                          <div>
+                            <span className="font-body text-xs text-white/30">В ролях</span>
+                            <p className="font-body text-sm text-white/70 line-clamp-1">{film.cast}</p>
+                          </div>
+                        </div>
+
+                        <p className="font-body text-sm text-white/55 leading-relaxed">{film.desc}</p>
+                      </div>
+
+                      <div className="flex items-center gap-3 mt-5 pt-4 border-t border-white/5">
+                        <div className="flex items-center gap-1">
+                          {[1,2,3,4,5].map(s => (
+                            <Icon key={s} name="Star" size={11} className={s <= Math.round(film.rating / 2) ? "text-gold fill-current" : "text-white/15"} />
+                          ))}
+                          <span className="ml-1 font-body text-sm font-semibold text-gold">{film.rating}</span>
+                        </div>
+                        <span className="font-body text-xs text-white/30">оценка редакции</span>
                       </div>
                     </div>
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Итог месяца */}
+            <div className="mt-12 border border-gold/15 bg-gold/5 p-6 md:p-8">
+              <div className="flex items-center gap-2 mb-3">
+                <Icon name="Film" size={16} className="text-gold" />
+                <span className="font-body text-xs tracking-widest text-gold uppercase">Итог месяца</span>
+              </div>
+              <p className="font-display text-lg md:text-xl font-light text-white/80 italic leading-relaxed">
+                Май получился необычно разнообразным: от модной сатиры и супергероики до хоррора и ностальгических франшиз. Главная интрига месяца — смогут ли продолжения и перезапуски предложить зрителю не только знакомые лица, но и новые идеи.
+              </p>
             </div>
           </section>
         )}
